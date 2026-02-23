@@ -59,3 +59,19 @@ sample-app/
 ## Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for contribution guidelines, local setup, and PR expectations.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+## Security
+
+For reporting vulnerabilities and security policy details, see [SECURITY.md](SECURITY.md).
+
+## Support
+
+For support channels and issue-reporting guidance, see [SUPPORT.md](SUPPORT.md).
+
+## Code of Conduct
+
+This project follows the [Code of Conduct](CODE_OF_CONDUCT.md).
