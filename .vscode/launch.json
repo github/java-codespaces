@@ -1,0 +1,13 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "SampleApp",
+            "type": "java",
+            "request": "launch",
+            "mainClass": "com.example.app.Application",
+            "projectName": "sample-app",
+            "cwd": "${workspaceFolder}/sample-app"
+        }
+    ]
+}
