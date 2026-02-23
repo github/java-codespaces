@@ -15,7 +15,7 @@
         "vscode": {
             "extensions": [
                 "vscjava.vscode-java-pack",
-                "vmware.vscode-spring-boot",
+                "vmware.vscode-boot-dev-pack",
                 "GitHub.copilot",
                 "GitHub.vscode-github-actions"
             ]
@@ -26,8 +26,8 @@
     ],
     "postCreateCommand": "cd ./sample-app && mvn dependency:resolve --quiet",
     "hostRequirements": {
-        "memory": "8gb",
-        "cpus": 4
+        "memory": "4gb",
+        "cpus": 2
     },
     "portsAttributes": {
         "8080": {

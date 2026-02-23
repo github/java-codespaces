@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Weather forecast</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/css/site.css"/>
+</head>
+<body>
+<div class="page">
+    <div class="sidebar">
+        <div class="top-row ps-3 navbar navbar-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/">⛅ Weather App</a>
+            </div>
+        </div>
+        <nav class="flex-column nav-scrollable">
+            <div class="nav-item px-3">
+                <a class="nav-link active" href="/">🏠 Dashboard</a>
+            </div>
+            <div class="nav-item px-3">
+                <a class="nav-link" href="/api/weatherforecast">📡 Weather API</a>
+            </div>
+        </nav>
+    </div>
+
+    <main>
+        <div class="top-row px-4">
+            <a href="https://openjdk.org/" target="_blank" rel="noreferrer">Built with Java 25</a>
+        </div>
+
+        <article class="content px-4">
+            <div class="dashboard-header">
+                <h1>🌍 Weather Forecast</h1>
+                <p class="subtitle">5-day forecast from a plain Java HTTP service</p>
+            </div>
+
+            <div id="loading" class="loading-state">
+                <div class="spinner"></div>
+                <p>Loading forecast data...</p>
+            </div>
+
+            <div id="error" class="loading-state d-none">
+                <p>Unable to load weather data.</p>
+            </div>
+
+            <div id="cards" class="forecast-cards d-none"></div>
+
+            <div id="table-section" class="forecast-table-section d-none">
+                <h2>📊 Detailed View</h2>
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                        <tr>
+                            <th></th>
+                            <th>Date</th>
+                            <th>Temp. (C)</th>
+                            <th>Temp. (F)</th>
+                            <th>Summary</th>
+                        </tr>
+                        </thead>
+                        <tbody id="table-body"></tbody>
+                    </table>
+                </div>
+            </div>
+        </article>
+    </main>
+</div>
+<script src="/js/app.js"></script>
+</body>
+</html>

@@ -1,12 +1,30 @@
 package com.example.app;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import java.io.IOException;
 
-@SpringBootApplication
 public class Application {
 
-    public static void main(String[] args) {
-        SpringApplication.run(Application.class, args);
+    private static final int DEFAULT_PORT = 8080;
+
+    public static void main(String[] args) throws IOException {
+        int port = resolvePort();
+
+        var forecastController = new WeatherForecastService();
+        var server = new WeatherHttpServer(port, forecastController);
+
+        server.start();
+    }
+
+    private static int resolvePort() {
+        String portValue = System.getenv("PORT");
+        if (portValue == null || portValue.isBlank()) {
+            return DEFAULT_PORT;
+        }
+
+        try {
+            return Integer.parseInt(portValue);
+        } catch (NumberFormatException ignored) {
+            return DEFAULT_PORT;
+        }
     }
 }

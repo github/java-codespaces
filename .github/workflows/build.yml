@@ -25,4 +25,4 @@ jobs:
           cache: 'maven'
 
       - name: Build
-        run: mvn compile -f sample-app/pom.xml
+        run: mvn verify -f sample-app/pom.xml

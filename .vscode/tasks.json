@@ -6,7 +6,7 @@
             "type": "shell",
             "command": "mvn",
             "args": [
-                "compile",
+                "verify",
                 "-f",
                 "${workspaceFolder}/sample-app/pom.xml"
             ],

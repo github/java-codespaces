@@ -1,5 +1,6 @@
 html, body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: #f0f2f5;
 }
 
 h1:focus {
@@ -28,15 +29,16 @@ a, .btn-link {
 
 main {
     flex: 1;
+    background-color: #f0f2f5;
 }
 
 .sidebar {
-    background-image: linear-gradient(180deg, rgb(5, 39, 103) 0%, #3a0647 70%);
+    background-image: linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
 }
 
 .top-row {
-    background-color: #f7f7f7;
-    border-bottom: 1px solid #d6d5d5;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e2e8f0;
     justify-content: flex-end;
     height: 3.5rem;
     display: flex;
@@ -54,7 +56,7 @@ main {
 
 .sidebar .top-row {
     height: 3.5rem;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
 .navbar-brand {
@@ -94,9 +96,207 @@ main {
     color: white;
 }
 
+/* Dashboard header */
+.dashboard-header {
+    margin-bottom: 1.5rem;
+}
+
+.dashboard-header h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 0.25rem;
+}
+
+.dashboard-header .subtitle {
+    color: #64748b;
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+/* Forecast cards */
+.forecast-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.forecast-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 1.25rem;
+    text-align: center;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.06);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border-top: 4px solid #e2e8f0;
+}
+
+.forecast-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.forecast-card.card-hot {
+    border-top-color: #ef4444;
+    background: linear-gradient(to bottom, #fff5f5, #ffffff);
+}
+
+.forecast-card.card-warm {
+    border-top-color: #f59e0b;
+    background: linear-gradient(to bottom, #fffbeb, #ffffff);
+}
+
+.forecast-card.card-cool {
+    border-top-color: #3b82f6;
+    background: linear-gradient(to bottom, #eff6ff, #ffffff);
+}
+
+.forecast-card.card-cold {
+    border-top-color: #8b5cf6;
+    background: linear-gradient(to bottom, #f5f3ff, #ffffff);
+}
+
+.card-emoji {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+
+.card-date {
+    font-size: 0.85rem;
+    color: #64748b;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.card-temp {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1e293b;
+    line-height: 1;
+}
+
+.temp-value {
+    font-variant-numeric: tabular-nums;
+}
+
+.temp-unit {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #64748b;
+}
+
+.card-temp-secondary {
+    font-size: 0.85rem;
+    color: #94a3b8;
+    margin-top: 0.15rem;
+    margin-bottom: 0.5rem;
+}
+
+.card-summary {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #475569;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Detailed table section */
+.forecast-table-section {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.06);
+}
+
+.forecast-table-section h2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 1rem;
+}
+
+.forecast-table-section .table {
+    margin-bottom: 0;
+}
+
+.forecast-table-section .table thead th {
+    border-bottom: 2px solid #e2e8f0;
+    color: #64748b;
+    font-weight: 600;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.forecast-table-section .table tbody td {
+    vertical-align: middle;
+    color: #334155;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.forecast-table-section .table-hover tbody tr:hover {
+    background-color: #f8fafc;
+}
+
+/* Temperature badges */
+.temp-badge {
+    display: inline-block;
+    padding: 0.2rem 0.6rem;
+    border-radius: 9999px;
+    font-weight: 600;
+    font-size: 0.85rem;
+}
+
+.temp-badge.badge-hot {
+    background-color: #fef2f2;
+    color: #dc2626;
+}
+
+.temp-badge.badge-warm {
+    background-color: #fffbeb;
+    color: #d97706;
+}
+
+.temp-badge.badge-cool {
+    background-color: #eff6ff;
+    color: #2563eb;
+}
+
+.temp-badge.badge-cold {
+    background-color: #f5f3ff;
+    color: #7c3aed;
+}
+
+/* Loading state */
+.loading-state {
+    text-align: center;
+    padding: 3rem;
+    color: #64748b;
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #e2e8f0;
+    border-top: 4px solid #3b82f6;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+    margin: 0 auto 1rem;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
 @media (max-width: 640.98px) {
     .top-row:not(.auth) {
         display: none;
+    }
+
+    .forecast-cards {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
