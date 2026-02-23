@@ -2,7 +2,7 @@
     "configurations": [
         {
             "type": "java",
-            "name": "Launch Java Program",
+            "name": "Debug Java Program",
             "request": "launch",
             "mainClass": "com.example.app.Application",
             "vmArgs": "--add-modules jdk.httpserver",
