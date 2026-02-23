@@ -55,3 +55,7 @@ sample-app/
 - JDK `HttpServer` (`jdk.httpserver` module)
 - Vanilla JavaScript + Bootstrap 5
 - Apache Maven
+
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for contribution guidelines, local setup, and PR expectations.
