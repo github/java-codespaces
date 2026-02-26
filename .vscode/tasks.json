@@ -1,0 +1,28 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "type": "shell",
+            "command": "mvn",
+            "args": [
+                "verify",
+                "-f",
+                "${workspaceFolder}/sample-app/pom.xml"
+            ],
+            "problemMatcher": []
+        },
+        {
+            "label": "package",
+            "type": "shell",
+            "command": "mvn",
+            "args": [
+                "package",
+                "-DskipTests",
+                "-f",
+                "${workspaceFolder}/sample-app/pom.xml"
+            ],
+            "problemMatcher": []
+        }
+    ]
+}

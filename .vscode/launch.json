@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Debug Java Program",
+            "request": "launch",
+            "mainClass": "com.example.app.Application",
+            "vmArgs": "--add-modules jdk.httpserver",
+            "classPaths": [
+                "${workspaceFolder}/sample-app/target/classes"
+            ]
+        }
+    ]
+}
